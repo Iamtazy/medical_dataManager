@@ -97,7 +97,7 @@
        </div>
        
         <h:form id="table" > 
-                        <p:dataTable id="tagTable" value="#{patientControl_ctr.patientList}" var="tag" paginator="true" rows="9" rowKey="#{tag.patientId}" selectionMode="single">
+                        <p:dataTable id="tagTable" value="#{database.ListPatients()}" var="tag" paginator="true" rows="9" rowKey="#{tag.patientId}" selectionMode="single">
                             <p:column headerText="ID" sortBy="#{tag.patientId}" filterBy="#{tag.patientId}" filterMatchMode="exact">
                                 #{tag.patientId}  
                             </p:column>
