@@ -30,7 +30,7 @@
        	<h1 style="text-align:left; font-size: 30px; font-weight: bold; border-bottom: 2px solid blue;"> Examinations: </h1>
         <p style="text-align:center; font-size: 25px; font-weight: bold; border-bottom: 1px solid blue;">Lung screening once per year for over 18 year olds</p>
         <h:form id="table2" > 
-                        <p:dataTable id="tagTable2" value="#{visitControlOver18_ctr.visitList}" var="tag" paginator="true" rows="9" rowKey="#{tag.visitPatientId}"  selectionMode="single">
+                        <p:dataTable id="tagTable2" value="#{database.ListVisitsOver18()}" var="tag" paginator="true" rows="9" rowKey="#{tag.visitPatientId}"  selectionMode="single">
                             <p:column headerText="ID" sortBy=" #{tag.visitPatientId}" filterBy="#{tag.visitPatientId}" filterMatchMode="exact">
                                 #{tag.visitPatientId}
                             </p:column>
@@ -55,7 +55,7 @@
                     
          <p style="text-align:center; font-size: 25px; font-weight: bold; border-bottom: 1px solid blue;">Prostate examination every 2 years for males older than 35 years</p>
         <h:form id="table3" > 
-                        <p:dataTable id="tagTable3" value="#{visitControlOver35Male_ctr.visitList}" var="tag" paginator="true" rows="9" rowKey="#{tag.visitPatientId}"  selectionMode="single">
+                        <p:dataTable id="tagTable3" value="#{database.ListVisitsOver35Male()}" var="tag" paginator="true" rows="9" rowKey="#{tag.visitPatientId}"  selectionMode="single">
                             <p:column headerText="ID" sortBy=" #{tag.visitPatientId}" filterBy="#{tag.visitPatientId}" filterMatchMode="exact">
                                 #{tag.visitPatientId}
                             </p:column>
@@ -77,9 +77,9 @@
                     </h:form>
         
         
-        <p style="text-align:center; font-size: 25px; font-weight: bold; border-bottom: 1px solid blue;">3 évente mammográfiai vizsgálat a 45 évesnél idősebb nőknek</p>
+        <p style="text-align:center; font-size: 25px; font-weight: bold; border-bottom: 1px solid blue;">Mammography examination every 3 years for females older than 45 years</p>
         <h:form id="table4" > 
-                        <p:dataTable id="tagTable4" value="#{visitControlOver45Female_ctr.visitList}" var="tag" paginator="true" rows="9" rowKey="#{tag.visitPatientId}"  selectionMode="single">
+                        <p:dataTable id="tagTable4" value="#{database.ListVisitsOver45Female()}" var="tag" paginator="true" rows="9" rowKey="#{tag.visitPatientId}"  selectionMode="single">
                             <p:column headerText="ID" sortBy=" #{tag.visitPatientId}" filterBy="#{tag.visitPatientId}" filterMatchMode="exact">
                                 #{tag.visitPatientId}
                             </p:column>
@@ -103,7 +103,7 @@
                     
                     <p style="text-align:center; font-size: 25px; font-weight: bold; border-bottom: 1px solid blue;">General examination every 5 years</p>
         <h:form id="table5" > 
-                        <p:dataTable id="tagTable5" value="#{visitControlEvery5_ctr.visitList}" var="tag" paginator="true" rows="9" rowKey="#{tag.visitPatientId}"  selectionMode="single">
+                        <p:dataTable id="tagTable5" value="#{database.ListVisitsEvery5()}" var="tag" paginator="true" rows="9" rowKey="#{tag.visitPatientId}"  selectionMode="single">
                             <p:column headerText="ID" sortBy=" #{tag.visitPatientId}" filterBy="#{tag.visitPatientId}" filterMatchMode="exact">
                                 #{tag.visitPatientId}
                             </p:column>

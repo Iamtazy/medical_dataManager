@@ -100,19 +100,7 @@
     <h:outputText value="Success!" />
 	</p:dialog>
        </h:form>
-       
-       <div align="right">
-       <h:form id="delete">
-    	<h:panelGrid columns="3" cellpadding="5">
-        <p:outputLabel style="font-size: 18px; font-weight: bold; border-bottom: 1px solid blue;" for="deletePatientById" value="ID: " />
-        <p:inputText id="deletePatientById" value="#{database.deletePatientById}" required="true" /><p:tooltip for="deletePatientById" value="ID of the patient" trackMouse="true"/>
-       <p:commandButton style="font-size: 20px;" value="Delete" id="click" actionListener="#{database.deletePatient()}" onclick="PF('dlg97').show();" icon="ui-icon-closethick" update=":table:tagTable"/><br/>
-       </h:panelGrid>
-       <p:dialog header="Result" widgetVar="dlg97" minHeight="40">
-    <h:outputText value="Successfully deleted the patient!" />
-	</p:dialog>
-       </h:form>
-       </div>
+
        
        <h:form id="table" > 
                         <p:dataTable id="tagTable" value="#{patientControl_ctr.patientList}" var="tag" paginator="true" rows="9" rowKey="#{tag.patientId}" selectionMode="single">

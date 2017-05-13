@@ -60,7 +60,7 @@
         <p:tooltip for="birthDate" value="Patients birth date" trackMouse="true"/>
         
         <p:outputLabel style="font-size: 18px; font-weight: bold; border-bottom: 1px solid blue;" for="pills" value="Pills: " />
-        <p:inputText style="width: 120%;" id="pill" value="#{database.newPatientPills}" placeholder="Pills" />
+        <p:inputText style="width: 120%;" id="pills" value="#{database.newPatientPills}" placeholder="Pills" />
         <p:tooltip for="pills" value="Pills for the patient" trackMouse="true"/>
         
         <p:outputLabel style="font-size: 18px; font-weight: bold; border-bottom: 1px solid blue;" for="treatments" value="Treatments" />
@@ -97,7 +97,7 @@
        </div>
        
         <h:form id="table" > 
-                        <p:dataTable id="tagTable" value="#{patientsControl_ctr.patientList}" var="tag" paginator="true" rows="9" rowKey="#{tag.patientId}" selectionMode="single">
+                        <p:dataTable id="tagTable" value="#{patientControl_ctr.patientList}" var="tag" paginator="true" rows="9" rowKey="#{tag.patientId}" selectionMode="single">
                             <p:column headerText="ID" sortBy="#{tag.patientId}" filterBy="#{tag.patientId}" filterMatchMode="exact">
                                 #{tag.patientId}  
                             </p:column>

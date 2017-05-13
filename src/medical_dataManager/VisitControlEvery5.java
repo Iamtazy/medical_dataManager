@@ -14,19 +14,19 @@ public class VisitControlEvery5 {
 	
 	private Database database=new Database();
 	    
-	    private List<Visit> visitList;
+	    private List<Visit> visitListEvery5;
 	    
 	    public VisitControlEvery5() {
-	    	visitList = database.ListVisitsEvery5();
+	    	visitListEvery5 = database.ListVisitsEvery5();
 	    }
 
 		public List<Visit> getVisitList() {
-			visitList = database.ListVisitsEvery5();
-			return visitList;
+			visitListEvery5 = database.ListVisitsEvery5();
+			return visitListEvery5;
 		}
 
 		public void setVisitList(List<Visit> visitList) {
-			this.visitList = visitList;
+			this.visitListEvery5 = visitList;
 		}
 		
 

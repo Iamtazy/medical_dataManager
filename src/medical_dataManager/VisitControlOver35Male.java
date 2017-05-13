@@ -14,19 +14,19 @@ public class VisitControlOver35Male {
 	
 	private Database database = new Database();
 	    
-	    private List<Visit> visitList;
+	    private List<Visit> visitListOver35Male;
 	    
 	    public VisitControlOver35Male() {
-	    	visitList = database.ListVisitsOver35Male();
+	    	visitListOver35Male = database.ListVisitsOver35Male();
 	    }
 
-		public List<Visit> getVisitList2() {
-			visitList = database.ListVisitsOver35Male();
-			return visitList;
+		public List<Visit> getVisitListOver35Male() {
+			visitListOver35Male = database.ListVisitsOver35Male();
+			return visitListOver35Male;
 		}
 
-		public void setVisitList2(List<Visit> visitList) {
-			this.visitList = visitList;
+		public void setVisitListOver35Male(List<Visit> visitList) {
+			this.visitListOver35Male = visitList;
 		}
 		
 

@@ -17,7 +17,7 @@ import javax.annotation.Resource;
 import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ViewScoped;
 import javax.sql.DataSource;
-@ManagedBean(name="medical_database")
+@ManagedBean(name="database")
 @ViewScoped
 @SessionScoped
 
@@ -278,7 +278,7 @@ public class Database implements Serializable{
             
             
     
-            ps.setInt(1, newPatientId);
+            	 ps.setInt(1, newPatientId);
             	 ps.setString(2, newPatientName);
             	 ps.setString(3, newPatientGender);
             	 ps.setInt(4, newPatientSocialSec);
@@ -414,7 +414,7 @@ public class Database implements Serializable{
             ps.setInt(6, newPatientSocialSec);
             ps.executeUpdate();
             
-            if(newPatientVisitDate != null)
+            /*if(newPatientVisitDate != null)
             { 
             PreparedStatement ps2 = connection.prepareStatement("delete from Patients where socialSec=?");
             ps2.setInt(1, newPatientSocialSec);
@@ -424,7 +424,7 @@ public class Database implements Serializable{
             PreparedStatement ps3 = connection.prepareStatement("delete from Visits where visitPatientSocialSec=?");
             ps3.setInt(1, newPatientSocialSec);
             ps3.executeUpdate();
-            }
+            }*/
             
         } catch (Exception e) {
             e.printStackTrace();

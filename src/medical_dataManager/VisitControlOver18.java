@@ -14,19 +14,19 @@ public class VisitControlOver18 {
 	
 	private Database database = new Database();
 	    
-	    private List<Visit> visitList;
+	    private List<Visit> visitList2;
 	    
 	    public VisitControlOver18() {
-	    	visitList = database.ListVisitsOver18();
+	    	visitList2 = database.ListVisitsOver18();
 	    }
 
 		public List<Visit> getVisitList() {
-			visitList = database.ListVisitsOver18();
-			return visitList;
+			visitList2 = database.ListVisitsOver18();
+			return visitList2;
 		}
 
 		public void setVisitList(List<Visit> visitList) {
-			this.visitList = visitList;
+			this.visitList2 = visitList;
 		}
 		
 
